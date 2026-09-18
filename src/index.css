@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  /*
+   * Single source of truth for the brand gradient.
+   * Change this one value to re-theme the brand name, hero highlight,
+   * and every primary button across the app.
+   */
+  --brand-gradient: linear-gradient(90deg, #f97316, #ec4899, #9333ea);
+}
+
+/* Gradient text (brand name, hero highlight) */
+.brand-gradient-text {
+  background-image: var(--brand-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Gradient fill (primary buttons) */
+.brand-gradient-bg {
+  background-image: var(--brand-gradient);
+}
+
+body {
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+}
