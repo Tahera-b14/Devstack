@@ -4,7 +4,7 @@ Build your ideal development stack. Browse frontend, backend, database, language
 styling, and DevOps tools side by side, search for what you need, and collect your
 picks in a running "Your Stack" panel.
 
-**Live Site:** _add your deployed link here_
+**Live Site:**  https://tahera-b14.github.io/Devstack/
 
 ## ✨ Features
 
