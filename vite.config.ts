@@ -1,6 +1,4 @@
-vite.config.ts
 
-ow file or error ache 
 
 
 import { defineConfig } from 'vite'
