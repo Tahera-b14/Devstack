@@ -19,8 +19,7 @@ function Navbar() {
 
   const logo = (
     <a href="#" className="flex items-center">
-      <img src="/assets/logo-text.png" alt="Dev Stack" className="h-8" />
-    </a>
+      <img src={`${import.meta.env.BASE_URL}assets/logo-text.png`} alt="Dev Stack" className="h-8" />
   )
 
   return (

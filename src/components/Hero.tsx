@@ -35,7 +35,7 @@ function Hero({ onExplore }: HeroProps) {
 
       <div className="flex justify-center">
         <img
-          src="/assets/banner-stack.png"
+          src={`${import.meta.env.BASE_URL}assets/banner-stack.png`}
           alt="Isometric illustration of a layered development stack"
           className="w-64 md:w-80"
         />
