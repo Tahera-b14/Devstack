@@ -19,7 +19,12 @@ function Navbar() {
 
   const logo = (
     <a href="#" className="flex items-center">
-      <img src={`${import.meta.env.BASE_URL}assets/logo-text.png`} alt="Dev Stack" className="h-8" />
+      <img
+        src={`${import.meta.env.BASE_URL}assets/logo-text.png`}
+        alt="Dev Stack"
+        className="h-8"
+      />
+    </a>
   )
 
   return (
@@ -30,7 +35,7 @@ function Navbar() {
 
         <nav className="flex items-center gap-8 text-sm font-medium">
           {NAV_LINKS.map((link, index) => (
-            <a
+            
               key={link}
               href="#"
               className={
@@ -68,7 +73,7 @@ function Navbar() {
       {menuOpen && (
         <nav className="flex flex-col gap-1 border-t border-gray-200 px-4 py-3 md:hidden">
           {NAV_LINKS.map((link, index) => (
-            <a
+            
               key={link}
               href="#"
               className={
