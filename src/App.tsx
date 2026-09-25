@@ -21,8 +21,12 @@ function App() {
 
   // useEffect: runs once when the component mounts (empty dependency array).
   useEffect(() => {
-    fetch('/data/technologies.json')
-      .then((res) => res.json())
+    // BASE_URL is '/' in dev and '/Devstack/' on GitHub Pages
+    fetch(`${import.meta.env.BASE_URL}data/technologies.json`)
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        return res.json()
+      })
       .then((data: Technology[]) => {
         setTechnologies(data)
         setLoading(false)
