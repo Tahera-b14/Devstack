@@ -27,6 +27,14 @@ function Navbar() {
     </a>
   )
 
+  const desktopLinkClass = (index: number) =>
+    index === 0 ? 'text-pink-500' : 'text-gray-700 transition hover:text-pink-500'
+
+  const mobileLinkClass = (index: number) =>
+    index === 0
+      ? 'rounded-md px-2 py-2 text-sm font-medium text-pink-500'
+      : 'rounded-md px-2 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50'
+
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white">
       {/* Desktop layout: logo left, links centered, auth buttons right */}
@@ -35,17 +43,7 @@ function Navbar() {
 
         <nav className="flex items-center gap-8 text-sm font-medium">
           {NAV_LINKS.map((link, index) => (
-            
-              key={link}
-              href="#"
-              className={
-                index === 0
-                  ? 'text-pink-500'
-                  : 'text-gray-700 transition hover:text-pink-500'
-              }
-            >
-              {link}
-            </a>
+            <a key={link} href="#" className={desktopLinkClass(index)}>{link}</a>
           ))}
         </nav>
 
@@ -73,17 +71,7 @@ function Navbar() {
       {menuOpen && (
         <nav className="flex flex-col gap-1 border-t border-gray-200 px-4 py-3 md:hidden">
           {NAV_LINKS.map((link, index) => (
-            
-              key={link}
-              href="#"
-              className={
-                index === 0
-                  ? 'rounded-md px-2 py-2 text-sm font-medium text-pink-500'
-                  : 'rounded-md px-2 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50'
-              }
-            >
-              {link}
-            </a>
+            <a key={link} href="#" className={mobileLinkClass(index)}>{link}</a>
           ))}
         </nav>
       )}
