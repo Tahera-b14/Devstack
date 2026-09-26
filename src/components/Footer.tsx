@@ -10,7 +10,7 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-12">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
-            <img src="/assets/logo-text.png" alt="Dev Stack" className="h-8" />
+               <img src={`${import.meta.env.BASE_URL}assets/logo-text.png`} alt="Dev Stack" className="h-8" />
             <p className="mt-3 max-w-xs text-sm text-gray-500">
               Curated tools, technologies, and resources for developers building modern
               software.
